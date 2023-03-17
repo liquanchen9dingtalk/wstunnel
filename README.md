@@ -4,6 +4,7 @@
 
 
 
+> [![Deploy2](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Fliquanchen9dingtalk%2Fwstunnel&envs=ID%2CWSPATH&IDDesc=UUID&WSPATHDesc=WebsocketPath)
 
 
 
