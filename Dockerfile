@@ -33,7 +33,7 @@ LABEL org.opencontainers.image.source https://github.com/liquanchen9dingtalk/wst
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # COPY --from=builder /root/.local/bin/wstunnel /
 ADD entrypoint.sh /opt/entrypoint.sh
-RUN apk add curl && chmod +x /opt/entrypoint.sh
+RUN chmod +x /opt/entrypoint.sh
 
 WORKDIR /
 
