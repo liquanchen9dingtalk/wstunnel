@@ -20,8 +20,8 @@ chmod +x /wstunnel
 /wstunnel --server ws://0.0.0.0:33344 &
 
 # 根据环境变量 配置nginx 配置
-sed 's/www_port/${PORT}/' /etc/nginx/conf.d/default.conf
-sed 's/www_wspath/${WSPATH}/' /etc/nginx/conf.d/default.conf
+sed -i 's/www_port/${PORT}/' /etc/nginx/conf.d/default.conf
+sed -i 's/www_wspath/${WSPATH}/' /etc/nginx/conf.d/default.conf
 
 # 启动 nginx 服务
 nginx 
