@@ -25,15 +25,15 @@
 
 # FROM alpine:latest as runner
 # 修改为基于nginx 镜像 启动；
+#FROM nginx:alpine-slim
 FROM nginx:latest
-
 LABEL org.opencontainers.image.source https://github.com/liquanchen9dingtalk/wstunnel
 
 # 复制配置模板 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 # COPY --from=builder /root/.local/bin/wstunnel /
 ADD entrypoint.sh /opt/entrypoint.sh
-RUN chmod +x /opt/entrypoint.sh
+RUN apk add curl && chmod +x /opt/entrypoint.sh
 
 WORKDIR /
 
