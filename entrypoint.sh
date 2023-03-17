@@ -17,6 +17,6 @@ chmod +x /wstunnel
 # 根据环境变量 配置nginx 配置
 sed -i "s/www_port/${PORT}/g" /etc/nginx/conf.d/default.conf
 sed -i "s/www_wspath/${WSPATH}/g" /etc/nginx/conf.d/default.conf
-
+sed -i "s/1024/128/g" /etc/nginx/nginx.conf
 # 启动 nginx 服务
 nginx 
