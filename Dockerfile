@@ -25,7 +25,7 @@
 
 # FROM alpine:latest as runner
 # 修改为基于nginx 镜像 启动；
-FROM nginx
+FROM nginx:latest
 
 LABEL org.opencontainers.image.source https://github.com/liquanchen9dingtalk/wstunnel
 
@@ -36,6 +36,7 @@ ADD entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
 
 WORKDIR /
+User nginx
 
 CMD ["/opt/entrypoint.sh"]
 

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-
-
 if [ "$WSPATH" = "" ]; then
 export WSPATH="$1"
 fi
