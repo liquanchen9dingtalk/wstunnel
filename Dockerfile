@@ -36,7 +36,6 @@ ADD entrypoint.sh /opt/entrypoint.sh
 RUN chmod +x /opt/entrypoint.sh
 
 WORKDIR /
-User nginx
 
 CMD ["/opt/entrypoint.sh"]
 
